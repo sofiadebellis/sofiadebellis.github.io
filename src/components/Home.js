@@ -46,7 +46,7 @@ export default function Homepg () {
   return (
     <>
       <Home>
-        <NavBar></NavBar>
+        <NavBar/>
       </Home>
     </>
   )

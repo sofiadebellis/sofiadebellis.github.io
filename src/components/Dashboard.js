@@ -77,7 +77,7 @@ const Link = styled('a')({
 });
 
 
-function HomePg () {
+export default function Dashboard () {
   const particlesInit = useCallback(async engine => {
     console.log(engine);
     await loadFull(engine);
@@ -177,11 +177,11 @@ function HomePg () {
             <LightBtn
               name="getStarted"
               id="getStarted"
-              // onClick={() => (
-              //   navigate('/home')
-              // )}
+              onClick={() => (
+                navigate('/home')
+              )}
               endIcon={<ArrowForwardIcon />}>
-              Get started now
+              Get to know me
             </LightBtn>
           </CustomButton>
           </Link>
@@ -190,4 +190,3 @@ function HomePg () {
     </>
   )
 }
-export default HomePg;

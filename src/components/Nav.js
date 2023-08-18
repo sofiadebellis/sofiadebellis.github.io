@@ -17,9 +17,6 @@ import {
   styled
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import HomeIcon from '@mui/icons-material/Home';
-import CodeIcon from '@mui/icons-material/Code';
-import SubjectIcon from '@mui/icons-material/Subject';
 import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -109,28 +106,25 @@ function DrawerAppBar (props) {
       <List>
           <ListItem disablePadding>
             <StyledListItemButton
-            startIcon={<HomeIcon />}
             aria-label="home"
             id="navlistDashboardBtn"
             onClick={() => navigate('/home')}>
               <ListItemText
-              primary='Home'/>
+              primary='Home.'/>
             </StyledListItemButton>
             <StyledListItemButton
-            startIcon={<CodeIcon />}
             aria-label="projects"
             id="navlistDashboardBtn"
             onClick={() => navigate('/projects')}>
               <ListItemText
-              primary='Projects'/>
+              primary='Projects.'/>
             </StyledListItemButton>
             <StyledListItemButton
-            startIcon={<CodeIcon />}
             aria-label="resume"
             id="navlistDashboardBtn"
-            onClick={() => navigate('/resume')}>
+            onClick={() => navigate('/contact')}>
               <ListItemText
-              primary='Resume'/>
+              primary='Get in touch.'/>
             </StyledListItemButton>
           </ListItem>
       </List>
@@ -168,27 +162,24 @@ function DrawerAppBar (props) {
               <StyledButton
               aria-label="dashboard"
               id="navDeshboardBtn"
-              startIcon={<HomeIcon />}
               onClick={() => navigate('/home')}>
-                Home
+                Home.
               </StyledButton>
           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block', padding:'30px' } }}>
               <StyledButton
               aria-label="dashboard"
               id="navDeshboardBtn"
-              startIcon={<CodeIcon />}
               onClick={() => navigate('/projects')}>
-                Projects
+                Projects.
               </StyledButton>
           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block', padding:'30px' } }}>
               <StyledButton
               aria-label="resume"
               id="navDeshboardBtn"
-              startIcon={<SubjectIcon />}
-              onClick={() => navigate('/resume')}>
-                Resume
+              onClick={() => navigate('/contact')}>
+                Get in touch.
               </StyledButton>
           </Box>
         </Toolbar>

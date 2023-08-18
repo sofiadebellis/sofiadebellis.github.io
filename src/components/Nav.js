@@ -1,4 +1,3 @@
-// Sourced from https://mui.com/material-ui/react-app-bar/#responsive-app-bar-with-drawer
 import * as React from 'react';
 import {
   AppBar,
@@ -84,7 +83,7 @@ const StyledBox = styled(Box)({
   display: 'flex',
 });
 
-function DrawerAppBar (props) {
+export default function  (props) {
   const navigate = useNavigate();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -208,5 +207,3 @@ function DrawerAppBar (props) {
     </>
   );
 }
-
-export default DrawerAppBar;

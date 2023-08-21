@@ -51,8 +51,7 @@ const StyledTypographyMain = styled(Typography)({
     sm: 'block'
   },
   '&:hover': {
-    cursor: 'pointer',
-    color: '#D3A528'
+    cursor: 'pointer'
   }
 });
 
@@ -83,7 +82,7 @@ const StyledBox = styled(Box)({
   display: 'flex',
 });
 
-export default function  (props) {
+export default function NavBar (props) {
   const navigate = useNavigate();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);

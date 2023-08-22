@@ -22,54 +22,29 @@ const Home = styled('div')({
   color: '#333333',
 });
 
-const DarkBtn = styled(Button)({
-  marginTop: '35px',
-  background: '#333333',
-  border: 'none',
-  paddingTop: '10px',
-  paddingBottom: '10px',
-  paddingLeft: '20px',
-  paddingRight: '20px',
-  borderRadius: '50px',
-  color: '#white',
-  width: '100%',
-})
-
-const LightBtn = styled(DarkBtn)({
-  background: 'none',
-  color: '#333333',
-  border: '1px solid #333333',
-  borderRadius: '50px',
-  width: '100px',
+const StyledTimelineItem = styled(TimelineItem)({
   '&:hover': {
-    backgroundColor: '#333333',
-    border: '1px solid white',
-    color: 'white',
+    cursor: 'pointer',
+    color: '#D3A528',
   }
 });
 
 const experience = [
   {
-    label: 'Select campaign settings',
-    year: '2022- C',
-    description: `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`,
+    label: 'Experience',
   },
   {
-    label: 'Create an ad group',
-    year: '2022- C',
-    description:
-      'An ad group contains one or more ads which target a shared set of keywords.',
+    label: 'Education',
   },
   {
-    label: 'Create an ad',
-    year: '2022- C',
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    label: 'Skills'
   },
+  {
+    label: 'Volunteering',
+  },
+  {
+    label: 'Honors & awards'
+  }
 ];
 
 export default function Homepg () {
@@ -80,13 +55,13 @@ export default function Homepg () {
       <Home>
         <Timeline position="alternate">
           {experience.map((e, index) => (
-            <TimelineItem>
+            <StyledTimelineItem>
               <TimelineSeparator>
                 <TimelineDot variant="outlined"/>
                 { index !== experience.length - 1 ? <TimelineConnector /> : <></>}
               </TimelineSeparator>
               <TimelineContent>{e.label}</TimelineContent>
-            </TimelineItem>
+            </StyledTimelineItem>
           ))}
         </Timeline>
       </Home>

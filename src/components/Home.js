@@ -9,6 +9,7 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import Footer from './Footer';
 
 const Home = styled('div')({
   backgroundColor: 'white',
@@ -19,7 +20,6 @@ const Home = styled('div')({
   backgroundSize: 'cover',
   fontFamily: '"Poppins", "Arial", "Helvetica Neue", sans-serif',
   color: '#333333',
-  // margin: '100px'
 });
 
 const DarkBtn = styled(Button)({
@@ -90,6 +90,7 @@ export default function Homepg () {
           ))}
         </Timeline>
       </Home>
+      <Footer/>
     </>
   )
 }

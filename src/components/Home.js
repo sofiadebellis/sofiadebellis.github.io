@@ -30,21 +30,11 @@ const StyledTimelineItem = styled(TimelineItem)({
 });
 
 const experience = [
-  {
-    label: 'Experience',
-  },
-  {
-    label: 'Education',
-  },
-  {
-    label: 'Skills'
-  },
-  {
-    label: 'Volunteering',
-  },
-  {
-    label: 'Honors & awards'
-  }
+  { label: 'Experience' },
+  { label: 'Education' },
+  { label: 'Skills' },
+  { label: 'Volunteering' },
+  { label: 'Honors & awards' }
 ];
 
 export default function Homepg () {

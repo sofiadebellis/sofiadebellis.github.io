@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { styled } from '@mui/material';
-import Button from '@mui/material/Button';
 // import { useNavigate } from 'react-router-dom';
 import NavBar from './Nav';
 import Timeline from '@mui/lab/Timeline';
@@ -10,6 +9,8 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Footer from './Footer';
+import profilePhoto from '../assets/profile.png'
+
 
 const Home = styled('div')({
   backgroundColor: 'white',
@@ -20,14 +21,36 @@ const Home = styled('div')({
   backgroundSize: 'cover',
   fontFamily: '"Poppins", "Arial", "Helvetica Neue", sans-serif',
   color: '#333333',
+  marginTop: '50px',
 });
 
-const StyledTimelineItem = styled(TimelineItem)({
+const StyledTimelineContent = styled(TimelineContent)({
+  fontFamily: '"Poppins", "Arial", "Helvetica Neue", sans-serif',
+  color: '#333333',
   '&:hover': {
     cursor: 'pointer',
     color: '#D3A528',
   }
+})
+
+const Parent = styled('div')({
+  flexDirection: 'row',
+  maxWidth: '800px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  flexWrap: 'wrap',
 });
+
+const Child = styled('div')({
+  width: '50%',
+  textAlign: 'center',
+  justifyContent: 'center',
+  alignItems: 'center'
+})
+
 
 const experience = [
   { label: 'Experience' },
@@ -43,15 +66,23 @@ export default function Homepg () {
     <>
       <NavBar/>
       <Home>
+        <Parent>
+            <Child>
+              <img alt="profile img" src={profilePhoto}></img>
+            </Child>
+            <Child>
+              Hi! I’m Sofia! A second-year UNSW Computer Science Co-op scholar with a keen interest in computer science, front end development and UI/UX. 
+            </Child>
+        </Parent>
         <Timeline position="alternate">
           {experience.map((e, index) => (
-            <StyledTimelineItem>
+            <TimelineItem>
               <TimelineSeparator>
                 <TimelineDot variant="outlined"/>
                 { index !== experience.length - 1 ? <TimelineConnector /> : <></>}
               </TimelineSeparator>
-              <TimelineContent>{e.label}</TimelineContent>
-            </StyledTimelineItem>
+              <StyledTimelineContent>{e.label}</StyledTimelineContent>
+            </TimelineItem>
           ))}
         </Timeline>
       </Home>

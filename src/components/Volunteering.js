@@ -11,12 +11,7 @@ import {
 } from '@mui/material';
 import NavBar from './Nav';
 import Footer from './Footer';
-import optiver from '../assets/Optiver.jpg'
-import atlassian from '../assets/Atlassian.png'
 import unsw from '../assets/UNSW.png'
-import rev from '../assets/rev.png'
-import codecamp from '../assets/codecamp.png'
-import connectedcode from '../assets/connectedcode.png'
 
 const Experience = styled('div')({
   backgroundColor: 'white',

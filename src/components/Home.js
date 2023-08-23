@@ -73,7 +73,7 @@ export default function Homepg() {
 
   return (
     <>
-            <Particles
+        <Particles
           id="tsparticles"
           init={particlesInit}
           loaded={particlesLoaded}

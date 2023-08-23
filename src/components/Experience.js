@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {
   styled,
-  Divider,
   List,
   ListItem,
   ListItemAvatar,
@@ -17,6 +16,8 @@ import unsw from '../assets/UNSW.png'
 import rev from '../assets/rev.png'
 import codecamp from '../assets/codecamp.png'
 import connectedcode from '../assets/connectedcode.png'
+import { loadFull } from 'tsparticles';
+import Particles from 'react-tsparticles';
 
 const Experience = styled('div')({
   backgroundColor: 'white',
@@ -39,6 +40,7 @@ const Parent = styled('div')({
   marginLeft: 'auto',
   marginRight: 'auto',
   flexWrap: 'wrap',
+  zIndex: 1
 });
 
 const Title = styled('div')({
@@ -50,6 +52,7 @@ const Title = styled('div')({
   marginLeft: 'auto',
   marginRight: 'auto',
   flexWrap: 'wrap',
+  zIndex: 1
 })
 
 const StyledListItem = styled(ListItem)({
@@ -62,16 +65,95 @@ const StyledListItem = styled(ListItem)({
   }
 })
 
-export default function experience() {
+export default function ExperiencePg() {
+  const particlesInit = React.useCallback(async engine => {
+    console.log(engine);
+    await loadFull(engine);
+  }, []);
+  
+  const particlesLoaded = React.useCallback(async container => {
+    await console.log(container);
+  }, []);
+
   return (
     <>
+            <Particles
+          id="tsparticles"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={{
+            position: 'fixed',
+            width: '100%',
+            zIndex: -1,
+            background: {
+              color: '#ffffff'
+            },
+            fpsLimit: 60,
+            interactivity: {
+              events: {
+                onHover: {
+                  enable: true,
+                  mode: 'repulse',
+                },
+                resize: true,
+              },
+              modes: {
+                repulse: {
+                  distance: 200,
+                  duration: 0.4,
+                },
+              },
+            },
+            particles: {
+              color: {
+                value: '#D3A528',
+              },
+              links: {
+                color: '#D3A528',
+                distance: 120,
+                enable: true,
+                opacity: 0.2,
+                width: 1,
+              },
+              collisions: {
+                enable: true,
+              },
+              move: {
+                directions: 'none',
+                enable: true,
+                outModes: {
+                  default: 'bounce',
+                },
+                random: false,
+                speed: 2,
+                straight: false,
+              },
+              number: {
+                density: {
+                  enable: true,
+                  area: 800,
+                },
+                value: 65,
+              },
+              opacity: {
+                value: 0.2,
+              },
+              shape: {
+                type: 'circle',
+              },
+              size: {
+                value: { min: 1, max: 5 },
+              },
+            },
+            detectRetina: true,
+          }}
+        />
       <NavBar/>
       <Experience>
         <Parent>
           <Title>Experience</Title>
         </Parent>
         <br/>
-        <Divider/>
         <Parent>
           <List>
             <Stack spacing={3}>

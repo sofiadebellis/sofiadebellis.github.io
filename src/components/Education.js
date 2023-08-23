@@ -11,12 +11,9 @@ import {
 } from '@mui/material';
 import NavBar from './Nav';
 import Footer from './Footer';
-import optiver from '../assets/Optiver.jpg'
-import atlassian from '../assets/Atlassian.png'
+import ursulas from '../assets/ursuals.png'
 import unsw from '../assets/UNSW.png'
-import rev from '../assets/rev.png'
-import codecamp from '../assets/codecamp.png'
-import connectedcode from '../assets/connectedcode.png'
+import usyd from '../assets/usyd.png'
 
 const Experience = styled('div')({
   backgroundColor: 'white',
@@ -58,7 +55,7 @@ const StyledListItem = styled(ListItem)({
     borderColor: '#f4f4f4',
     borderRadius: '15px',
     cursor: 'pointer',
-    transform: 'scale(1.1)',
+    transform: 'scale(1.05)',
   }
 })
 
@@ -80,8 +77,53 @@ export default function Education() {
                 <Avatar src={unsw}/>
                 </ListItemAvatar>
                 <ListItemText
-                  primary="Bachelor of Computer Science"
+                  primary="Bachelor of Computer Science Co-op"
                   secondary="UNSW Sydney (2022 - 2024)"
+                />
+              </StyledListItem>
+              <StyledListItem>
+                <ListItemAvatar>
+                <Avatar src={usyd}/>
+                </ListItemAvatar>
+                <ListItemText
+                  primary="National Computer Science Summer School - Embedded Stream (Returner)"
+                  secondary="University of Sydney (Jan 2021)"
+                />
+              </StyledListItem>
+              <StyledListItem>
+                <ListItemAvatar>
+                <Avatar src={usyd}/>
+                </ListItemAvatar>
+                <ListItemText
+                  primary="High School Fellowship Program - INFO1110"
+                  secondary="University of Sydney (Jan 2020 - July 2020)"
+                />
+              </StyledListItem>
+              <StyledListItem>
+                <ListItemAvatar>
+                <Avatar src={usyd}/>
+                </ListItemAvatar>
+                <ListItemText
+                  primary="National Computer Science Summer School - Web Stream"
+                  secondary="University of Sydney (Jan 2020)"
+                />
+              </StyledListItem>
+              <StyledListItem>
+                <ListItemAvatar>
+                <Avatar src={unsw}/>
+                </ListItemAvatar>
+                <ListItemText
+                  primary="Engineering World Health Summer Intensive"
+                  secondary="UNSW Sydney (Jan 2022)"
+                />
+              </StyledListItem>
+              <StyledListItem>
+                <ListItemAvatar>
+                <Avatar src={ursulas}/>
+                </ListItemAvatar>
+                <ListItemText
+                  primary="High School Certificate"
+                  secondary="St Ursula's College Kingsgrove (2016 - 2021)"
                 />
               </StyledListItem>
             </Stack>

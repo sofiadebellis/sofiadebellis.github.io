@@ -58,7 +58,7 @@ const StyledListItem = styled(ListItem)({
     borderColor: '#f4f4f4',
     borderRadius: '15px',
     cursor: 'pointer',
-    transform: 'scale(1.1)',
+    transform: 'scale(1.05)',
   }
 })
 

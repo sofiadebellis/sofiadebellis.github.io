@@ -1,24 +1,23 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import { styled } from '@mui/material';
-import Paper from '@mui/material/Paper';
+import {
+  Box,
+  styled, 
+  BottomNavigation,
+  BottomNavigationAction,
+} from '@mui/material';
+
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
-const StyledPaper = styled(Paper)({
+const StyledBox = styled(Box)({
+  pb: 7,
   position: 'fixed',
   display: 'flex',
   bottom: '20px', 
   left: 0, 
   right: '20px',
   justifyContent: 'flex-end',
-});
-
-const StyledBox = styled(Box)({
-  pb: 7
 })
 
 const StyledBottomNavigationAction = styled(BottomNavigationAction)({
@@ -37,7 +36,6 @@ export default function Footer() {
 
   return (
     <StyledBox ref={ref}>
-      <StyledPaper elevation={0}>
         <BottomNavigation>
           <a href="https://www.linkedin.com/in/sofiadebellis/">
             <StyledBottomNavigationAction label="Linkedin" icon={<LinkedInIcon />}/>
@@ -49,7 +47,6 @@ export default function Footer() {
             <StyledBottomNavigationAction label="Email" icon={<MailOutlineIcon />} />
           </a>
         </BottomNavigation>
-      </StyledPaper>
     </StyledBox>
   );
 }

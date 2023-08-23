@@ -82,7 +82,7 @@ const StyledBox = styled(Box)({
   display: 'flex',
 });
 
-export default function NavBar (props) {
+export default function NavBar(props) {
   const navigate = useNavigate();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -97,7 +97,7 @@ export default function NavBar (props) {
       variant="h6"
       aria-label="sofiadebellis"
       id="navlistLogoBtn"
-      onClick={() => navigate('/home')}>
+      onClick={() => navigate('/')}>
         SD
       </StyledTypography>
       <Divider />
@@ -152,7 +152,7 @@ export default function NavBar (props) {
             component="div"
             aria-label="menu"
             id="navLogoBtn"
-            onClick={() => navigate('/home')}
+            onClick={() => navigate('/')}
           >
             Sofia De Bellis
           </StyledTypographyMain>

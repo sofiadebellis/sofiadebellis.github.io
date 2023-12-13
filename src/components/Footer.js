@@ -18,13 +18,15 @@ const StyledBox = styled(Box)({
   left: 0, 
   right: '20px',
   justifyContent: 'flex-end',
+  zIndex: 1
 })
 
 const StyledBottomNavigationAction = styled(BottomNavigationAction)({
   '&:hover': {
     color: '#D3A528',
     cursor: 'pointer',
-  }
+  },
+  zIndex: 1
 })
 
 export default function Footer() {

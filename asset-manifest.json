@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/sofiadebellis.github.io/static/js/main.c9fb5ae9.js",
+    "static/media/UNSW.png": "/sofiadebellis.github.io/static/media/UNSW.5ac450cc2a389b7fff22.png",
+    "static/media/codecamp.png": "/sofiadebellis.github.io/static/media/codecamp.0777e568cfe05d89547d.png",
+    "static/media/usyd.png": "/sofiadebellis.github.io/static/media/usyd.9bb0900add548902361a.png",
+    "static/media/profile.png": "/sofiadebellis.github.io/static/media/profile.4fbb591b8280f8e24ea4.png",
+    "static/media/ursuals.png": "/sofiadebellis.github.io/static/media/ursuals.37a28506d8c703e788f7.png",
+    "static/media/connectedcode.png": "/sofiadebellis.github.io/static/media/connectedcode.a344973d3ef2503506cd.png",
+    "static/media/rev.png": "/sofiadebellis.github.io/static/media/rev.9267239a22aa54c06eb2.png",
+    "static/media/canva.svg": "/sofiadebellis.github.io/static/media/canva.0f0b2ed198b63b099a14bc21cb59d1c9.svg",
+    "index.html": "/sofiadebellis.github.io/index.html",
+    "main.c9fb5ae9.js.map": "/sofiadebellis.github.io/static/js/main.c9fb5ae9.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.c9fb5ae9.js"
+  ]
+}
